@@ -1,0 +1,72 @@
+body.cursor_01 {
+  padding: 50px;
+  background-color: #FEF7E2;
+}
+body.cursor_01 a {
+  padding: 10px;
+  display: inline-block;
+  font-size: 24px;
+  margin: 0 20px;
+  text-decoration: none;
+  position: relative;
+  z-index: 999;
+  font-family: "Be Vietnam", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  color: #323232;
+}
+body.cursor_01 a:hover {
+  color: #0700FF;
+  transition: all ease 0.6s;
+}
+
+.cursor {
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  user-select: none;
+  pointer-events: none;
+  border-radius: 100%;
+}
+.cursor.hover {
+  background-color: rgba(7, 0, 255, 0.3);
+  transition: all ease 0.5s;
+}
+.cursor.hover .cursor__circle {
+  stroke-dashoffset: 300%;
+  transition: all ease 0.6s;
+}
+.cursor.hover .cursor__click {
+  transform: translate3d(-50%, 50%, 0);
+  opacity: 1;
+  transition: all ease 0.5s 0.1s;
+}
+
+.cursor__ring {
+  width: 100%;
+  height: 100%;
+  transform: rotate(-180deg);
+}
+
+.cursor__circle {
+  stroke-dashoffset: 0%;
+  stroke-dasharray: 300%;
+  stroke-width: 10;
+  stroke: #0700FF;
+  transition: all ease 0.8s;
+}
+
+.cursor__click {
+  width: 40%;
+  height: auto;
+  position: absolute;
+  bottom: 0%;
+  left: 50%;
+  transform: translate3d(calc(-50% - 24px), 50%, 0);
+  opacity: 0;
+  transition: all ease 0.5s;
+}
